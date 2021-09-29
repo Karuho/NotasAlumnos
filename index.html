@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba 2</title>
+<script type="text/javascript" src="validaciones.js"></script>
+        <link type="text/css" rel="stylesheet" href="estilos.css" media="screen" /></link>
+</head>
+
+<body>
+  <form name="frmNotas">
+    <table class="table tablaext" border="0" cellspacing="0" cellpadding="5" align="center">
+      <tr>
+        <td class="titulo" colspan="4" align="center"><b>Ingreso de notas del alumno </b></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="espacio">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">Nombre del Alumno:</td>
+        <td>&nbsp;</td>
+        <td> <input type="text" name="txtAlumno" placeholder="Ej:Luciano"></td>
+      </tr>
+      <tr>
+
+        <td class="campo" colspan="2">Nota 1:</td>
+
+        <td> &nbsp; </td>
+        <td> <input type="text" name="txtNota1" size="5" onchange="calculonotas()" placeholder="Ej:10"></td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">Nota 2:</td>
+        <td> &nbsp; </td>
+        <td> <input type="text" name="txtNota2" size="5" onchange="calculonotas()" placeholder="Ej:20"></td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">Nota 3:</td>
+        <td> &nbsp; </td>
+        <td> <input type="text" name="txtNota3" size="5" onchange="calculonotas()" placeholder="Ej:30"></td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">Examen:</td>
+        <td> &nbsp;</td>
+        <td> <input type="text" name="txtExamen" size="5" value="" onchange="valexamen()" id="txtExamen"></td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">Promedio antes examen:</td>
+        <td> &nbsp;</td>
+        <td class="resultado" id="msjPromedioAE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">¿Realiza Examen?</td>
+        <td>&nbsp;</td>
+        <td class="resultado" id="msjRealizaExamen" onchange="RealizaExamen()">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="campo" colspan="2">Promedio Final:</td>
+        <td>&nbsp;</td>
+        <td class="resultadofinal" id="msjPromedioFinal">&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td class="espacio" colspan="4" align="center">&nbsp;
+        </td>
+      </tr>
+
+      <!--Botones-->
+      <tr>
+        <td colspan="4" align="center">
+          <input type="button" value="Certificado" onclick="abrirCertificado();">
+          <input type="button" value="Limpiar" onclick="limpiar();">
+          <input type="button" value="Ayuda" onclick="ayuda();">
+
+        </td>
+
+      </tr>
+
+    </table>
+
+  </form>
+</body>
+
+</html>
